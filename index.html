@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VueJS Tutorials</title>
-    <link href='styles.css' ref='stylesheet' />
+    <link href='/styles.css' ref='stylesheet' />
     <script src='https://unpkg.com/vue'></script>
 </head>
 <body>
     <div id='vue-app'>      
-      <h1>Data Binding</h1>
-      <a v-bind:href='website'>Twitter</a>
-      <input type='text' v-bind:value='name'>
-      <p v-html='websiteTag'></p>
+      <h1>Events</h1>
+      <button @click='add'>Add a year</button>
+      <button v-on:click='subtract'>Subtract a year</button>
+      <button @dblclick='add(10)'>Add 10 years</button>
+      <button v-on:dblclick='subtract(10)'>Subtract 10 years</button>
+      <p>My age is {{ age }}</p>
+      <div id='canvas' v-on:mousemove='updateXY'>{{ x }}, {{ y }}</div>
     </div>
 
     <script src='app.js'></script>
