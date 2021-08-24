@@ -9,13 +9,22 @@
 </head>
 <body>
     <div id='vue-app'>      
-      <h1>Conditionals</h1>
-      <button v-on:click='error = !error'>Toggle Error</button>
-      <button v-on:click='success = !success'>Toggle Success</button>
-      <!-- <p v-if='error'>There was an error</p>
-      <p v-else-if='success'>There was some success</p> -->
-      <p v-show='error'>There were an error</p>
-      <p v-show='success'>Some success</p>
+      <h1>Looping through lists</h1>
+      <ul>
+        <li v-for='(character, index) in characters'>{{ index }}. {{ character }}</li>
+      </ul>
+      <ul>
+        <li v-for='(other, index) in others'>{{ index }}. {{ other.name }} - {{ other.age }}</li>
+      </ul>
+      <template v-for='(other, index) in others'>
+        <h3>{{ index }}. {{ other.name }}</h3>
+        <p>{{ other.age }}</p>
+      </template>
+      <template v-for='other in others'>
+        <div v-for='(val,key) in other'>
+          <p>{{ key }} - {{ val }}</p>
+        </div>
+      </template>
     </div>
 
     <script src='app.js'></script>

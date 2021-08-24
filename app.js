@@ -3,8 +3,12 @@
 new Vue({
   el: '#vue-app',
   data: {
-    error: false,
-    success: false,
+    name: 'darcey',
+    characters: ['yasmine', 'sasha', 'chloe'],
+    others: [
+      {name: 'Darcey', age: 26},
+      {name: 'Rously', age: 25}
+    ]
   },
   methods: {
  
