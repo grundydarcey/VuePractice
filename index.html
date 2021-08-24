@@ -10,12 +10,13 @@
 <body>
     <div id='vue-app'>      
       <h1>Events</h1>
-      <button @click='add'>Add a year</button>
-      <button v-on:click='subtract'>Subtract a year</button>
+      <button @click.once='add(1)'>Add a year</button>
+      <button v-on:click='subtract(1)'>Subtract a year</button>
       <button @dblclick='add(10)'>Add 10 years</button>
       <button v-on:dblclick='subtract(10)'>Subtract 10 years</button>
       <p>My age is {{ age }}</p>
       <div id='canvas' v-on:mousemove='updateXY'>{{ x }}, {{ y }}</div>
+      <a v-on:click.prevent='click' href='http://www.google.com'>Google</a>
     </div>
 
     <script src='app.js'></script>

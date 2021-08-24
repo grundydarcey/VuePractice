@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 new Vue({
   el: '#vue-app',
@@ -14,9 +15,12 @@ new Vue({
       this.age -= dec;
     },
     updateXY: function(event) {
-      //event.preventDefault();
       this.x = event.offsetX;
       this.y = event.offsetY;
+    },
+    click: function(event) {
+      event.preventDefault(); 
+      console.log('clicked');
     }
   }
 });
