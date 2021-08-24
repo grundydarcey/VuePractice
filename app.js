@@ -3,19 +3,18 @@
 new Vue({
   el: '#vue-app',
   data: {
-    age: 20,
-    a: 0,
-    b: 0
+    available: false,
+    nearby: false
   },
   methods: {
  
   },
   computed: {
-    addToA: function() {
-      return this.a + this.age;
-    },
-    addToB: function() {
-      return this.b + this.age;
+    compClasses: function() {
+      return {
+        available: this.available,
+        nearby: this.nearby
+      }
     }
   }
 });
