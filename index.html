@@ -9,15 +9,11 @@
 </head>
 <body>
 
-    <h1>Components</h1>
-    <div id='vue-app-one'>
-      <h2>Vue app one</h2>
-      <greeting></greeting>
-    </div>
-
-    <div id='vue-app-two'>
-      <h2>Vue app two</h2>
-      <greeting></greeting>
+    <div id='vue-app'>
+      <h1>Refs</h1>
+      <input type='text' ref='input' />
+      <button v-on:click='readRefs'>Submit</button>
+      <p>Your fav food: {{ output }}</p>
     </div>
 
     <script src='app.js'></script>

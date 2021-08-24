@@ -1,25 +1,14 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
-var data = {
-    name: 'Yoshi'
-}
 
-Vue.component('greeting', {
-  template: '<p>Im a {{ name }}. <button v-on:click='changeName'>Change name</button> </p>',
-  data: function() {
-    return data;
+new Vue({
+  el: '#vue-app',
+  data: {
+    output: 'Your fav food'
   },
   methods: {
-    changeName: function() {
-      this.name = 'Mario';
+    readRefs: function() {
+      this.output = this.$refs.input.value;
     }
   }
-});
-
-new Vue({
-  el: '#vue-app-one'
-});
-
-new Vue({
-  el: '#vue-app-two'
 });
