@@ -3,7 +3,9 @@ new Vue({
   el: '#vue-app',
   data: {
     name: 'Darcey',
-    job: 'Software Application Developer'
+    job: 'Software Application Developer',
+    website: 'http://www.twitter.com',
+    websiteTag: '<a href="https://twitter.com">Twittah</a>'
   },
   methods: {
     greet: function(time) {

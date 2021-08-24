@@ -8,10 +8,11 @@
     <script src='https://unpkg.com/vue'></script>
 </head>
 <body>
-    <div id='vue-app'>
-      <h1>{{ greet('afternoon') }}</h1>
-      <h2>{{ name }}</h2>
-      <p>Job: {{ job }}</p>
+    <div id='vue-app'>      
+      <h1>Data Binding</h1>
+      <a v-bind:href='website'>Twitter</a>
+      <input type='text' v-bind:value='name'>
+      <p v-html='websiteTag'></p>
     </div>
 
     <script src='app.js'></script>
