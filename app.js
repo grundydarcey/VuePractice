@@ -3,15 +3,20 @@
 new Vue({
   el: '#vue-app',
   data: {
-    name: 'darcey',
-    characters: ['yasmine', 'sasha', 'chloe'],
-    others: [
-      {name: 'Darcey', age: 26},
-      {name: 'Rously', age: 25}
-    ]
+    health: 100,
+    ended: false
   },
   methods: {
- 
+    punch: function() {
+      this.health -= 10;
+      if (this.health <= 0) {
+        this.ended = true;
+      }
+    },
+    restart: function() {
+      this.health = 100;
+      this.ended = false;
+    }
   },
   computed: {
   
